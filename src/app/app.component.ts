@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'material-tabs';
+  activeTab = 'home';
+  onTabClick(type: string) {
+    this.activeTab = type;
+    console.log(type);
+  }
 }

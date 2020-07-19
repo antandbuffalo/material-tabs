@@ -6,9 +6,9 @@
 </div>
 
 <nav mat-tab-nav-bar mat-align-tabs="start">
-  <a mat-tab-link routerLink="/home"> Home </a>
-  <a mat-tab-link routerLink="/tab1"> Tab 1</a>
-  <a mat-tab-link routerLink="/tab2"> Tab 2 </a>
+  <a mat-tab-link routerLink="/home" (click)="onTabClick('home')" [active]="activeTab == 'home'"> Home </a>
+  <a mat-tab-link routerLink="/tab1" (click)="onTabClick('tab1')" [active]="activeTab == 'tab1'"> Tab 1</a>
+  <a mat-tab-link routerLink="/tab2" (click)="onTabClick('tab2')" [active]="activeTab == 'tab2'"> Tab 2 </a>
 </nav>
 
 <router-outlet></router-outlet>
