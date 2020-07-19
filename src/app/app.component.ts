@@ -13,3 +13,6 @@ export class AppComponent {
     console.log(type);
   }
 }
+
+// https://material.angular.io/components/tabs/examples
+// https://material.angular.io/components/tabs/overview
