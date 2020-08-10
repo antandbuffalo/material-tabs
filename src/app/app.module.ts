@@ -10,8 +10,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSortModule } from '@angular/material/sort';
+import { MatButtonModule } from '@angular/material/button';
 
+import { Tab1Module } from './tab1/tab1.module';
 import { HomeComponent } from './home/home.component';
+import { Tab1homeComponent } from './tab1/tab1home/tab1home.component';
 
 @NgModule({
   declarations: [
@@ -27,9 +30,12 @@ import { HomeComponent } from './home/home.component';
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatSortModule
+    MatSortModule,
+    MatButtonModule,
+    Tab1Module
   ],
   providers: [],
   bootstrap: [AppComponent]
+  // bootstrap: [Tab1homeComponent]
 })
 export class AppModule { }

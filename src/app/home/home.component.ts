@@ -1,7 +1,9 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
+
+import { english, tamil } from './../../modulefoldereg/greet';
 
 export interface UserData {
   id: string;
@@ -23,7 +25,8 @@ const NAMES: string[] = [
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
   displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
@@ -42,6 +45,8 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    console.log(english());
   }
 
   applyFilter(filterValue: string) {
